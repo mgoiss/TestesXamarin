@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhaSaude.Telas.IMC"
+             Title="IMC" >
+
+    <StackLayout Padding="30" Spacing="30">
+
+        <Entry Placeholder="Digite o Peso" Keyboard="Numeric"  x:Name="txtPeso"/>
+        <Entry Placeholder="Digite a Altura" Keyboard="Numeric" x:Name="txtAltura"/>
+        <Button Text="Calcular" TextColor="#FFFFFF" BackgroundColor="#00416B" Clicked="Calculo"/>
+        <Label Text="" HorizontalOptions="Center" x:Name="lblResultado" TextColor="#c12028" FontSize="Large" FontAttributes="Bold"/>
+
+    </StackLayout>
+
+</ContentPage>

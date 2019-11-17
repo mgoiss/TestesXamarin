@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Telas="clr-namespace:MinhaSaude.Telas" 
+             x:Class="MinhaSaude.MainPage"             >
+
+    <ContentPage BackgroundImage="Inicial1.png">
+    </ContentPage>
+
+    <ContentPage BackgroundImage="Inicial2.png">
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Button Text="Começar" Clicked="Comecar" VerticalOptions="End" HorizontalOptions="Center" Margin="30" BackgroundColor="#c12028" TextColor="White"/>
+        </StackLayout>
+    </ContentPage>
+
+</CarouselPage>
