@@ -4,12 +4,19 @@
              x:Class="MinhaSaude.Telas.IMC"
              Title="IMC" >
 
-    <StackLayout Padding="30" Spacing="30">
+    <StackLayout Padding="30" Spacing="30" BackgroundColor="#FFFFFF">
 
-        <Entry Placeholder="Digite o Peso" Keyboard="Numeric"  x:Name="txtPeso"/>
-        <Entry Placeholder="Digite a Altura" Keyboard="Numeric" x:Name="txtAltura"/>
-        <Button Text="Calcular" TextColor="#FFFFFF" BackgroundColor="#00416B" Clicked="Calculo"/>
-        <Label Text="" HorizontalOptions="Center" x:Name="lblResultado" TextColor="#c12028" FontSize="Large" FontAttributes="Bold"/>
+        <Entry Placeholder="Digite o Peso" Keyboard="Numeric"  x:Name="txtPeso" ClearButtonVisibility="WhileEditing"/>
+        <Entry Placeholder="Digite a Altura" Keyboard="Numeric" x:Name="txtAltura" ClearButtonVisibility="WhileEditing"/>
+        <Button Text="Calcular" TextColor="White" BackgroundColor="#c12028" Clicked="Calculo"/>
+
+        <Label Text="Seu IMC é:" HorizontalOptions="Center" x:Name="lblTitulo" TextColor="#c12028" IsVisible="False"/>
+        <Entry IsReadOnly="true" Placeholder="Valor" x:Name="txtIMC" FontSize="Large" FontAttributes="Bold" IsVisible="False" HorizontalOptions="CenterAndExpand"/>
+
+        <Label Text="Índice:" HorizontalOptions="Center" x:Name="lblDescricao" TextColor="#c12028" IsVisible="False"/>
+        <Entry IsReadOnly="true" x:Name="txtDescricao" IsVisible="False" HorizontalOptions="CenterAndExpand"/>
+
+        <Image Source="IMC.png" x:Name="ImagemIMC" IsVisible="False"/>
 
     </StackLayout>
 

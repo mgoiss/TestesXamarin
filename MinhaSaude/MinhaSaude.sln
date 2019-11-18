@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSaude.iOS", "MinhaSaud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSaude.UWP", "MinhaSaude\MinhaSaude.UWP\MinhaSaude.UWP.csproj", "{0260E0F9-8EEB-44C8-95C3-3E8ED30F1587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaSaude", "MinhaSaude\MinhaSaude\MinhaSaude.csproj", "{B6D88251-B638-4D08-BB0C-DC51D0D0BEE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaSaude", "MinhaSaude\MinhaSaude\MinhaSaude.csproj", "{B6D88251-B638-4D08-BB0C-DC51D0D0BEE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

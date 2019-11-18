@@ -15,15 +15,33 @@ namespace MinhaSaude.Telas
 
         private void Calculo(object sender, EventArgs args)
         {
+            txtIMC.IsVisible = false;
+            txtDescricao.IsVisible = false;
+            lblTitulo.IsVisible = false;
+            lblDescricao.IsVisible = false;
+            ImagemIMC.IsVisible = false;
+
+            txtIMC.Text = string.Format("");
+            txtDescricao.Text = string.Format("");
+
+
             if (isValidDados())
             {
                 try
                 {
                     ClasseIMC imc = new ClasseIMC(float.Parse(txtPeso.Text), float.Parse(txtAltura.Text));
 
+                    txtIMC.TextColor = Color.FromHex(imc.CorResultado);
+                    txtDescricao.TextColor = Color.FromHex(imc.CorResultado);                    
 
-                    lblResultado.Text = string.Format("Seu IMC é: {0:F2}\n\n" +
-                                                       "Avaliação: {1}", imc.ValorImc, imc.Resultado.ToUpper());
+                    txtIMC.IsVisible = true;
+                    txtDescricao.IsVisible = true;
+                    lblTitulo.IsVisible = true;
+                    lblDescricao.IsVisible = true;
+                    ImagemIMC.IsVisible = true;
+
+                    txtIMC.Text = string.Format("{0:F2}", imc.ValorImc);
+                    txtDescricao.Text = string.Format("{0}", imc.Resultado.ToUpper());
                 }
                 catch (Exception ex)
                 {

@@ -10,6 +10,7 @@ namespace MinhaSaude.Modelo
         public float Altura { get; set; }
         public float ValorImc { get; set; }
         public string Resultado { get; set; }
+        public string CorResultado { get; set; }
 
         public ClasseIMC(float peso, float altura)
         {
@@ -23,23 +24,23 @@ namespace MinhaSaude.Modelo
         {
             if (ValorImc < 18.5)
             {
-                Resultado = "Magreza";
+                Resultado = "Abaixo do Peso";
+                CorResultado = "#ffde00";
             }
-            else if (ValorImc < 24.9)
+            else if (ValorImc < 25)
             {
-                Resultado = "Normal";
+                Resultado = "Peso Normal";
+                CorResultado = "#2891ce";
             }
-            else if (ValorImc < 29.9)
+            else if (ValorImc < 30)
             {
-                Resultado = "Sobrepeso";
-            }
-            else if (ValorImc < 39.9)
-            {
-                Resultado = "Obesidade";
+                Resultado = "Acima do Peso";
+                CorResultado = "#ff6c00";
             }
             else
             {
-                Resultado = "Obesidade Grave";
+                Resultado = "Obeso";
+                CorResultado = "#e60000";
             }
         }
     }

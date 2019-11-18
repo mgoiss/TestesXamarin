@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MinhaSaude.Telas.Abas"
             xmlns:Telas="clr-namespace:MinhaSaude.Telas"
-            BarBackgroundColor="#c12028">
+            BarBackgroundColor="#c12028" BarTextColor="White">
 
-    <Telas:IMC Icon=""/>
+    <Telas:IMC/>
     <Telas:QuantAgua/>
     <Telas:Sobre/>
 </TabbedPage>

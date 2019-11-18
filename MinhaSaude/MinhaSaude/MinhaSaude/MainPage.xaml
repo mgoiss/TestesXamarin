@@ -1,16 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:Telas="clr-namespace:MinhaSaude.Telas" 
-             x:Class="MinhaSaude.MainPage"             >
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:controle="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+            xmlns:ci="clr-namespace:Xamarin.Forms.PageControl;assembly=Xamarin.Forms.PageControl"
+            x:Class="MinhaSaude.MainPage" BackgroundColor="Black" >
 
-    <ContentPage BackgroundImage="Inicial1.png">
-    </ContentPage>
+    <ContentPage.Content>
 
-    <ContentPage BackgroundImage="Inicial2.png">
-        <StackLayout VerticalOptions="EndAndExpand">
-            <Button Text="Começar" Clicked="Comecar" VerticalOptions="End" HorizontalOptions="Center" Margin="30" BackgroundColor="#c12028" TextColor="White"/>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <controle:CarouselView ItemsSource="{Binding Itens}"
+                                   AbsoluteLayout.LayoutFlags="All" Position="{Binding Position, Mode=TwoWay}">
+
+                <controle:CarouselView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                            <Image Source="{Binding Imagem}" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 1" />
+                            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 1" VerticalOptions="Center">
+                                <Label Text="{Binding Titulo}" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="CenterAndExpand" />
+                                <Label Text="{Binding Detalhe}" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="CenterAndExpand" />
+                            </StackLayout>
+
+                        </AbsoluteLayout>
+
+                    </DataTemplate>
+
+                </controle:CarouselView.ItemTemplate>
+            </controle:CarouselView>
+
+            <ci:PageControl ShowIndicator="true" IndicatorHeight="12" IndicatorWidth="12" UnselectedIndicator="unselected_circle.png"
+                                       SelectedIndicator="selected_circle.png" Position="{Binding Position}" ItemsSource="{Binding Itens}" />
+            <Button BackgroundColor="Blue" TextColor="White" BorderRadius="0" Text="Começar" Clicked="Comecar"/>
+
         </StackLayout>
-    </ContentPage>
 
-</CarouselPage>
+    </ContentPage.Content>
+
+</ContentPage>

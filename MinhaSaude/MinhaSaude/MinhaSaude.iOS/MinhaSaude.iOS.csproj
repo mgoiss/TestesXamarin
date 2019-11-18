@@ -148,7 +148,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -158,9 +158,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Inicial1.png" />
+    <BundleResource Include="Resources\selected_circle.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Inicial2.png" />
+    <BundleResource Include="Resources\TelaInicial1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TelaInicial2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\unselected_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IMC.png" />
   </ItemGroup>
 </Project>
