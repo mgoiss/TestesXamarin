@@ -5,9 +5,11 @@
              Title="Sobre">
     <ContentPage.Content>
         <StackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand">
+            <Image Source="Icon.png" HorizontalOptions="Center"/>
+            <Label Text="Nome: Minha Saúde" HorizontalOptions="CenterAndExpand" TextColor="#c12028" FontSize="Large" FontAttributes="Bold"/>
             <Label Text="Desenvolvedor: Matheus Gois" HorizontalOptions="CenterAndExpand" TextColor="#c12028" FontSize="Large" FontAttributes="Bold"/>
             <Label Text="Empresa: Vó Bidu Software" HorizontalOptions="CenterAndExpand" TextColor="#c12028" FontSize="Large"  FontAttributes="Bold"/>
-            <Label Text="Função: Aplicativo feito como uma meneira de testar as funções parendidas do curso de XAMARIN" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="#c12028" />
+            <Label Text="Função: Aplicativo feito como uma meneira de testar as funções aparendidas do curso de XAMARIN" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="#c12028" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

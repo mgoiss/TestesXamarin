@@ -33,7 +33,7 @@
 
             <ci:PageControl ShowIndicator="true" IndicatorHeight="12" IndicatorWidth="12" UnselectedIndicator="unselected_circle.png"
                                        SelectedIndicator="selected_circle.png" Position="{Binding Position}" ItemsSource="{Binding Itens}" />
-            <Button BackgroundColor="Blue" TextColor="White" BorderRadius="0" Text="Começar" Clicked="Comecar"/>
+            <Button BackgroundColor="#c12028" TextColor="White" BorderRadius="0" Text="Começar" Clicked="Comecar"/>
 
         </StackLayout>
 
